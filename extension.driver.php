@@ -32,7 +32,7 @@ Class extension_backend_language_switcher extends Extension{
 	}
 
 	public function initializeAdmin($context) {
-		$LOAD_NUMBER = 95593529;
+		$LOAD_NUMBER = 955935299;
 		$page = $context['parent']->Page;
 		$author = $context['parent']->Author;
 		$languages = explode(',', Symphony::Configuration()->get('languages', 'language_redirect') );
