@@ -12,8 +12,8 @@ Class extension_backend_language_switcher extends Extension{
 	public function about(){
 		return array(
 			'name' => 'Backend Language Switcher',
-			'version' => '1.0',
-			'release-date' => '2010-10-19',
+			'version' => '0.1',
+			'release-date' => '2010-10-20',
 			'author' => array(
 				'name' => 'John J. Camilleri',
 				'email' => 'john@johnjcamilleri.com'
