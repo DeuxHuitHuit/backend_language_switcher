@@ -1,0 +1,23 @@
+http://rtfx.com.pc29/symphony/system/authors/edit/1/
+
+POST
+
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 227
+
+fields%5Bfirst_name%5D=John+J.&fields%5Blast_name%5D=Camilleri&fields%5Bemail%5D=jca%40rtfx.com&fields%5Busername%5D=admin-jjc&fields%5Bdefault_section%5D=1&fields%5Blanguage%5D=en&action%5Bsave%5D=Enregistrer+les+modifications
+
+action[save]	Enregistrer les modifications
+fields[default_section]	1
+fields[email]	jca@rtfx.com
+fields[first_name]	John J.
+fields[language]	en
+fields[last_name]	Camilleri
+fields[username]	admin-jjc
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://rtfx.com.pc29/symphony/assets/tables.css">
+
+
+
+<script type="text/javascript" src="http://rtfx.com.pc29/extensions/order_entries/assets/order.js"></script>
