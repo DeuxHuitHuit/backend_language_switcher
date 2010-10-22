@@ -2,13 +2,10 @@
 
 Allows authors to change the backend language with a single click.
 
-- Version: 0.1
-- Date: 2010-10-20
+- Version: 1.0
+- Date: 2010-10-22
 - Requirements: [Language Redirect][1]
 - Author: John J. Camilleri
-- Git Repository: <http://github.com/jstar198/backend-language-switcher>
-
-**This is a beta extension, please use with caution and provide feedback!**
 
 ## Installation ##
 
