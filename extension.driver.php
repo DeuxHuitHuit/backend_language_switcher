@@ -12,8 +12,8 @@ Class extension_backend_language_switcher extends Extension{
 	public function about(){
 		return array(
 			'name' => 'Backend Language Switcher',
-			'version' => '1.0',
-			'release-date' => '2010-10-22',
+			'version' => '1.1',
+			'release-date' => '2012-04-03',
 			'author' => array(
 				'name' => 'John J. Camilleri',
 				'email' => 'john@johnjcamilleri.com'
@@ -36,6 +36,7 @@ Class extension_backend_language_switcher extends Extension{
 		$page = $context['parent']->Page;
 		$author = $context['parent']->Author;
 		$languages = explode(',', Symphony::Configuration()->get('languages', 'language_redirect') );
+		if (sizeof($languages)==0) $languages = explode(',', Symphony::Configuration()->get('language_codes', 'language_redirect') );
 		$assets_path = URL . '/extensions/backend_language_switcher/assets';
 		
 		// CSS & JS for all admin
