@@ -35,8 +35,10 @@ Class extension_backend_language_switcher extends Extension{
 		$LOAD_NUMBER = 955935299;
 		$page = $context['parent']->Page;
 		$author = $context['parent']->Author;
-		$languages = explode(',', Symphony::Configuration()->get('languages', 'language_redirect') );
-		if (sizeof($languages)==0) $languages = explode(',', Symphony::Configuration()->get('language_codes', 'language_redirect') );
+		$codes = Symphony::Configuration()->get('languages', 'language_redirect');
+		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('language_codes', 'language_redirect');
+		$languages = array_map('trim',explode(',', $codes ));
+		
 		$assets_path = URL . '/extensions/backend_language_switcher/assets';
 		
 		// CSS & JS for all admin
