@@ -8,18 +8,6 @@
 Class extension_backend_language_switcher extends Extension{
 
 	public static $xml;
-
-	public function about(){
-		return array(
-			'name' => 'Backend Language Switcher',
-			'version' => '1.1',
-			'release-date' => '2012-04-03',
-			'author' => array(
-				'name' => 'John J. Camilleri',
-				'email' => 'john@johnjcamilleri.com'
-			)
-		);
-	}
 	
 	public function getSubscribedDelegates(){
 		return array(
@@ -33,8 +21,9 @@ Class extension_backend_language_switcher extends Extension{
 
 	public function initializeAdmin($context) {
 		$LOAD_NUMBER = 955935299;
-		$page = $context['parent']->Page;
-		$author = $context['parent']->Author;
+		$page = Administration::instance()->Page;
+		// var_dump($context);die;
+		$author = Administration::instance()->Author;
 		$codes = Symphony::Configuration()->get('languages', 'language_redirect');
 		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('language_codes', 'language_redirect');
 		$languages = array_map('trim',explode(',', $codes ));

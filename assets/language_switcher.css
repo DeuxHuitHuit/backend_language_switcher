@@ -5,9 +5,10 @@
  * @version 0.1
  */
 #nav li.backend_language_switcher {
-	padding: 10px 7px;
+	/*padding: 10px 7px;
 	height: 10px;
-	background: url("/symphony/assets/images/navigation.png") repeat-x scroll 0 -65px;
+	background: url("/symphony/assets/images/navigation.png") repeat-x scroll 0 -65px;*/
+	cursor:pointer;
 }
 #nav li.backend_language_switcher.first { margin-left: 30px; }
 #nav li.backend_language_switcher.selected { background-position: 0 -30px; }

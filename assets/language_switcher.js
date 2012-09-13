@@ -6,10 +6,10 @@
  */
 (function($) {
 $(document).ready(function() {
-	
+
 	for (i in Symphony.Languages) {
 		var lang = Symphony.Languages[i];
-		$('ul#nav').append(
+		$('nav#nav ul.structure').append(
 			// Nav menu item
 			$('<li />')
 				.addClass('backend_language_switcher')
@@ -25,7 +25,7 @@ $(document).ready(function() {
 				.append(
 					$('<img />')
 						.attr({
-							'src':Symphony.WEBSITE+'/extensions/backend_language_switcher/assets/flags/'+lang+'.png',
+							'src':Symphony.Context.get('root')+'/extensions/backend_language_switcher/assets/flags/'+lang+'.png',
 							'alt':lang.toUpperCase()
 						})
 				)
@@ -33,7 +33,7 @@ $(document).ready(function() {
 				.click(function(){
 					var li = $(this);
 					var lang = li.attr('lang');
-					var url = Symphony.WEBSITE + '/symphony/system/authors/edit/' + Symphony.Author.id + '/';
+					var url = Symphony.Context.get('root') + '/symphony/system/authors/edit/' + Symphony.Author.id + '/';
 					var data = {
 						'action[save]' 				: true,
 						'fields[default_section]'	: Symphony.Author.default_section,
