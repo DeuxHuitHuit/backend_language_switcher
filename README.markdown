@@ -2,8 +2,8 @@
 
 Allows authors to change the backend language with a single click.
 
-- Version: 1.0
-- Date: 2010-10-22
+- Version: 1.2
+- Date: 2012-09-13
 - Requirements: [Language Redirect][1] or [Frontend Localisation][2]
 - Authors: John J. Camilleri, Jon Mifsud
 
