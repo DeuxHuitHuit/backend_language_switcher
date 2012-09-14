@@ -25,7 +25,7 @@ Class extension_backend_language_switcher extends Extension{
 		// var_dump($context);die;
 		$author = Administration::instance()->Author;
 		//frontend localization
-		$codes = Symphony::Configuration()->get('frontend_localisation', 'langs');
+		$codes = Symphony::Configuration()->get('langs', 'frontend_localisation');
 		//language redirect cases
 		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('language_codes', 'language_redirect');
 		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('languages', 'language_redirect');
