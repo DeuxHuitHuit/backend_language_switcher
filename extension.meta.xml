@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="author_roles" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Backend Language Switcher</name>
+	<description>Add Backend Language Switcher</description>
+	<repo type="github">https://github.com/jonmifsud/backend-language-switcher</repo>
+	<url type="discuss">http://getsymphony.com/discuss/thread/53420/</url>
+	<types>
+		<type>Workflow</type>
+	</types>
+	<authors>
+		<author>
+			<name github="johnjcamilleri" symphony="jstar198">John J. Camilleri</name>
+			<website>http://johnjcamilleri.com</website>
+			<email>john@johnjcamilleri.com</email>
+		</author>
+		<author>
+			<name github="jonmifsud" symphony="gunglien">Jon Mifsud</name>
+			<website>http://jonmifsud.com</website>
+			<email>info@jonmifsud.com</email>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.1" date="2012-04-03" min="2.2" max="2.2.5" />
+		<release version="1.2" date="2012-09-13" min="2.3">
+			* Update for 2.3
+			* Added support for Frontend Localisation
+		</release>
+	</releases>
+</extension>
