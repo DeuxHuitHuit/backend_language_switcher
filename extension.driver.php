@@ -3,7 +3,7 @@
  * Backend language switcher
  *
  * @author John J. Camilleri
- * @version 1.0
+ * @version 1.2
  */
 Class extension_backend_language_switcher extends Extension{
 
