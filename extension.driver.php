@@ -3,11 +3,9 @@
  * Backend language switcher
  *
  * @author John J. Camilleri
- * @version 1.2
+ * @version 1.2.1
  */
 Class extension_backend_language_switcher extends Extension{
-
-	public static $xml;
 	
 	public function getSubscribedDelegates(){
 		return array(
@@ -18,20 +16,20 @@ Class extension_backend_language_switcher extends Extension{
 			),
 		);
 	}
+	
+	private $LOAD_NUMBER = 955935299;
 
 	public function initializeAdmin($context) {
-		$LOAD_NUMBER = 955935299;
+		$assets_path = URL . '/extensions/backend_language_switcher/assets';
 		$page = Administration::instance()->Page;
-		// var_dump($context);die;
 		$author = Administration::instance()->Author;
+		
 		//frontend localization
 		$codes = Symphony::Configuration()->get('langs', 'frontend_localisation');
 		//language redirect cases
 		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('language_codes', 'language_redirect');
 		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('languages', 'language_redirect');
 		$languages = array_map('trim',explode(',', $codes ));
-		
-		$assets_path = URL . '/extensions/backend_language_switcher/assets';
 		
 		// CSS & JS for all admin
 		$page->addStylesheetToHead($assets_path . '/language_switcher.css', 'all', $LOAD_NUMBER++);
@@ -60,22 +58,24 @@ Class extension_backend_language_switcher extends Extension{
 			$author->get('language')
 		));
 		$script->setSelfClosingTag(false);
-		$page->addElementToHead($script, $LOAD_NUMBER++);
-		$page->addScriptToHead($assets_path . '/language_switcher.js', $LOAD_NUMBER++);
+		$page->addElementToHead($script, $this->LOAD_NUMBER++);
+		$page->addScriptToHead($assets_path . '/language_switcher.js', $this->LOAD_NUMBER++);
 	}
 	
-	public function enable(){
+	public function enable() {
 		return $this->install();
 	}
 
-	public function disable(){
+	public function disable() {
+		return true;
 	}
 
-	public function install(){
+	public function install() {
+		return true;
 	}
 
-	public function uninstall(){
+	public function uninstall() {
+		return true;
 	}
 
 }
-?>
