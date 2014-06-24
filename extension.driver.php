@@ -11,7 +11,7 @@ Class extension_backend_language_switcher extends Extension{
 		return array(
 			array(
 				'page' => '/backend/',
-				'delegate' => 'InitaliseAdminPageHead',
+				'delegate' => 'InitialiseAdminPageHead',
 				'callback' => 'initializeAdmin',
 			),
 		);
