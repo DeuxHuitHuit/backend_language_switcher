@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension id="backend_language_switcher" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>Backend Language Switcher</name>
-	<description>Add Backend Language Switcher</description>
-	<repo type="github">https://github.com/johnjcamilleri/backend_language_switcher</repo>
+	<description>Add Backend Language Switcher to the backend</description>
+	<repo type="github">https://github.com/DeuxHuitHuit/backend_language_switcher</repo>
 	<url type="discuss">http://getsymphony.com/discuss/thread/53420/</url>
 	<types>
 		<type>Workflow</type>
+		<type>Backend</type>
+		<type>Multilingual</type>
+		<type>Language</type>
 	</types>
 	<authors>
+		<author>
+			<name github="DeuxHuitHuit" symphony="nitriques" twitter="DeuxHuitHuit">Deux Huit Huit</name>
+			<website>http://deuxhuithuit.com</website>
+		</author>
 		<author>
 			<name github="johnjcamilleri" symphony="jstar198">John J. Camilleri</name>
 			<website>http://johnjcamilleri.com</website>
