@@ -1,12 +1,12 @@
 # Backend Language Switcher #
 
-Allows authors to change the backend language with a single click.
+Version 1.2
+
+> Allows authors to change the backend language with a single click.
 
 ## About ##
 
-- Version: 1.2.1
-- Date: 2012-11-06
-- Requirements: [Language Redirect][1] or [Frontend Localisation][2]
+- Requirements: [Language Redirect][1] and [Frontend Localisation][2]
 - Contributors: John J. Camilleri, Jon Mifsud, Nicolas Brassard
 
 ## Installation ##
@@ -20,7 +20,6 @@ No further config is needed; the language-switching functionality is added direc
 ## Usage ##
 
 Simply change your backend language setting by clicking the flags in the navigation menu bar.
-
 
 
   [1]: http://symphonyextensions.com/extensions/language_redirect/
