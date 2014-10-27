@@ -34,7 +34,7 @@ Class extension_backend_language_switcher extends Extension{
 		//language redirect cases
 		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('language_codes', 'language_redirect');
 		if ($codes == '' || $codes == null) $codes = Symphony::Configuration()->get('languages', 'language_redirect');
-		$languages = array_map('trim',explode(',', $codes ));
+		$languages = array_filter(array_map('trim',explode(',', $codes )));
 		
 		// CSS & JS for all admin
 		$page->addStylesheetToHead($assets_path . '/language_switcher.css', 'all', $LOAD_NUMBER++);
@@ -42,7 +42,7 @@ Class extension_backend_language_switcher extends Extension{
 		$script->setAttributeArray(array('type' => 'text/javascript'));
 		$script->setValue(sprintf(
 			"
-				Symphony.Languages = ['%s'];
+				Symphony.Languages = %s;
 				Symphony.Author = {
 					id : %d,
 					default_section : %d,
@@ -53,7 +53,7 @@ Class extension_backend_language_switcher extends Extension{
 					language : '%s'
 				};
 			",
-			implode("','", $languages),
+			empty($languages) ? '[]' : "['" . implode("','", $languages) . "']",
 			$author->get('id'),
 			$author->get('default_section'),
 			$author->get('email'),

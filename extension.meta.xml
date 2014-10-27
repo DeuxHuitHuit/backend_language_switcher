@@ -27,6 +27,9 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.2.3" date="TBA" min="2.3.0" max="2.5.x">
+			* Fix visual glitch when no language is found
+		</release>
 		<release version="1.2.2" date="201-11-06" min="2.3.0" max="2.5.x">
 			* Minor update for 2.5.x
 		</release>
