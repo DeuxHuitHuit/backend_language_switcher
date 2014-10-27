@@ -22,7 +22,12 @@ Class extension_backend_language_switcher extends Extension{
 	public function initializeAdmin($context) {
 		$assets_path = URL . '/extensions/backend_language_switcher/assets';
 		$page = Administration::instance()->Page;
-		$author = Administration::instance()->Author;
+		$author = null;
+		if (is_callable(array('Symphony', 'Author'))) {
+			$author = Symphony::Author();
+		} else {
+			$author = Administration::instance()->Author;
+		}
 		
 		//frontend localization
 		$codes = Symphony::Configuration()->get('langs', 'frontend_localisation');
