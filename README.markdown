@@ -6,14 +6,14 @@ Version 1.2
 
 ## About ##
 
-- Requirements: [Language Redirect][1] and [Frontend Localisation][2]
+- Requirements: [Language Redirect][1] or [Frontend Localisation][2]
 - Contributors: John J. Camilleri, Jon Mifsud, Nicolas Brassard
 
 ## Installation ##
 
  1. Make sure the [Language Redirect][1] or [Frontend Localisation][2] is already installed and enabled.
  2. Install and enable **Backend Language Switcher** just like any other extension.
- 3. Language Extensions can be installed to provide a better experiece for multilingual users.
+ 3. Language Extensions can be installed to provide a better experience for multilingual users.
 
 No further config is needed; the language-switching functionality is added directly to the Symphony backend.
 
