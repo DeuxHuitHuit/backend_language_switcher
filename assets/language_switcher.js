@@ -40,7 +40,8 @@
 							'fields[first_name]'		: Symphony.Author.first_name,
 							'fields[last_name]'			: Symphony.Author.last_name,
 							'fields[username]'			: Symphony.Author.username,
-							'fields[language]'			: lang
+							'fields[language]'			: lang,
+							'xsrf': Symphony.Utilities ? Symphony.Utilities.getXSRF() : ''
 						}
 						$.post(url, data, function(data, textStatus){
 							// Callback function, reload page
