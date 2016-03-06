@@ -1,6 +1,6 @@
 # Backend Language Switcher #
 
-Version 1.2
+Version 1.2.x
 
 > Allows authors to change the backend language with a single click.
 
